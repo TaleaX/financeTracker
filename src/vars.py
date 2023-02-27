@@ -3,7 +3,7 @@ month_path = "../data/month.json"
 archive_path = "../data/archive.json"
 backup_path = "../data/backup.json"
 
-cmds = ("add", "view", "help", "exit")
+# cmds = ("add", "view", "help", "exit")
 start_ops = ("ja", "j", "yes", "y", "ye")
 view_ops = ("day", "month", "archive")
 

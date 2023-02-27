@@ -1,9 +1,9 @@
-from vars import cmds, start_ops
+from vars import start_ops
 from utils import get_input
-from commands import add, view, help
+from commands import view, help, mod
 
 command_dict = {
-	"add" : add,
+	"mod" : mod,
 	"view" : view,
 	"help" : help,
 	"exit" : exit
@@ -11,8 +11,8 @@ command_dict = {
 
 def app():
 	while True:
-		cmd = get_input("What do u wanna do <add> <view> <help> <exit>?\n> ")
-		if cmd in cmds:
+		cmd = get_input("What do u wanna do <mod> <view> <help> <exit>?\n> ")
+		if cmd in command_dict.keys():
 			command_dict[cmd]()
 
 
