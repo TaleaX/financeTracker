@@ -18,10 +18,11 @@ def app(month_path):
 
 if __name__ == "__main__":
 	start = get_input("Do u wanna use the finance App?\n> ")
-	person = get_input("Enter your name\n>")
 	if start in start_ops:
-		print("yay")
+		person = get_input("Enter your name\n>")
 		if (person + "_m") in paths.keys():
 			app(paths[person + "_m"])
+		else:
+			print("Sorry thiss person doesn't exist")
 	else:
 		print("Menno :(")

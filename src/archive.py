@@ -16,10 +16,10 @@ def init_archive (archive_path):
 
 def archive(archive_path, month_path):
 	if not os.path.isfile(archive_path):
-		init_archive()
+		init_archive(archive_path)
 	archive_data = load(archive_path)
 	if not os.path.isfile(month_path):
-		init_month()
+		init_month(month_path)
 	month_data = load(month_path)
 	archive_data["years"][0]["months"].append(month_data)
 	save(archive_data, archive_path, 0)
@@ -28,6 +28,6 @@ def archive(archive_path, month_path):
 if __name__ == "__main__":
 	person = sys.argv[1]
 	if (person + "_a") in paths.keys():
-		archive(person + "_a", person + "_m")
+		archive(paths[person + "_a"], paths[person + "_m"])
 	else:
 		print("Person doesnt exist")

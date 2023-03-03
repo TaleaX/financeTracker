@@ -1,3 +1,5 @@
+import operator
+
 day_path = "../data/day.json"
 month_path = "../data/month.json"
 archive_path = "../data/archive.json"
@@ -61,4 +63,9 @@ paths = {
     "dennis_a" : "../data/dennis_archive.json",
     "talea_m" : "../data/talea_month.json",
     "talea_a" : "../data/talea_archive.json",
+}
+
+operatores = {
+    "+" : operator.add,
+    "-" : operator.sub,
 }

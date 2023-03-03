@@ -1,10 +1,13 @@
 from utils import get_input
+from vars import operatores
 
-# def get_amount(inp, delim, operator):
-# 	amount_to_add = 0
-# 	numbers = inp.split(delim)
-# 	for number in numbers:
-# 		amount_to_add +
+def get_amount(inp):
+	amount = 0.0
+	numbers = inp.split("+")
+	for number in numbers:
+		# amount = operatores[operator](amount, float(number))
+		amount +=  float(number)
+	return amount
 
 
 def check_Input(func):
@@ -13,7 +16,8 @@ def check_Input(func):
 			category_tmp = args[0]
 			if args[4]:
 				category_tmp = args[4]
-			amount = float(get_input(f"{args[3]} {category_tmp} ?\n> "))
+			inp_amount = get_input(f"{args[3]} {category_tmp} ?\n> ")
+			amount = get_amount(inp_amount)
 			return func(args[0], args[1], amount, args[3], args[4])
 		except Exception as e:
 			print("an errror occured", e)
