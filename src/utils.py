@@ -70,7 +70,7 @@ def get_category(categories_obj):
 
 def	get_child_category(category_obj, category):
 	child_category = get_input(f"Choose {category} category:\n> ")
-
+	print(child_abbr[category].keys())
 	if child_category in child_abbr[category].keys():
 		child_category = abbr_to_category(child_category, child_abbr[category])
 	if child_category in category_obj.keys():

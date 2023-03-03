@@ -3,10 +3,11 @@ day_temp = {
 	"date":"",
 	"categories": {
 		"groceries": 0.0,
-		"houshold":0.0,
+		"household":0.0,
 		"rent": 0.0,
 		"toni": 0.0,
 		"health" : 0.0,
+        "cosmetics": 0.0,
 		"work" : {
 			"travel" : 0.0,
 			"goods" : 0.0,

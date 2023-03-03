@@ -1,6 +1,6 @@
 from utils import load, get_input, get_index, get_day_obj, get_category, save, get_child_category
-from vars import view_dict, view_ops, month_path, day_path
-from my_math import add_amount, sub_amount, change_amount
+from vars import view_dict, view_ops, month_path, day_path, inp_strings
+from mod_utils import add_amount, sub_amount, change_amount
 import json
 
 command_dict = {
@@ -9,16 +9,17 @@ command_dict = {
 	"change" : change_amount
 }
 	
-def view():
-	inp = get_input("What do u wanna view <day> <month> <archive>?\n> ")
-	if inp in view_ops:
-		json_data = load(view_dict[inp])
-	if not json_data:
-		print("Ups there are no", inp, "entries yet")
-	else:
-		print(json.dumps(json_data, indent=4))
+def view(month_path):
+	# inp = get_input("What do u wanna view <day> <month> <archive>?\n> ")
+	# if inp in view_ops:
+		# json_data = load(view_dict[inp])
+	# if not json_data:
+		# print("Ups there are no", inp, "entries yet")
+	# else:
+	json_data = load(month_path)
+	print(json.dumps(json_data, indent=4))
 
-def mod():
+def mod(month_path):
 	json_data = load(month_path)
 	if not json_data:
 		print("Ups there are no monthly entries yet")
@@ -35,7 +36,7 @@ def mod():
 	cmd = input("What do u wanna do <add> <sub> <change>?\n> ")
 	if cmd not in command_dict.keys():
 		return False
-	day_obj = command_dict[cmd](category, day_obj, child_category)
+	day_obj = command_dict[cmd](category, day_obj, 0, inp_strings[cmd], child_category)
 	if not day_obj:
 		return False
 	save(json_data, month_path, 0)
