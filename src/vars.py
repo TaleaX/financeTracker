@@ -36,12 +36,13 @@ work_abbr = {
 
 categories_abbr = {
 	"g"  : "groceries",
-	"ho" : "household",
+	"hou" : "household",
 	"t"  : "toni",
 	"he" : "health",
     "c"  : "cosmetics",
 	"w"  : "work",
 	"l"  : "lifestyle",
+    "hob" : "hobbies",
 	"i"  : "insurance",
 	"o"  : "others",
 	"to" : "total"

@@ -7,6 +7,7 @@ month_temp = {
 	"total_rent": 0.0,
 	"total_toni": 0.0,
 	"total_health" : 0.0,
+    "total_cosmetics": 0.0,
 	"work" : {
 		"total_travel" : 0.0,
 		"total_goods" : 0.0,
@@ -24,6 +25,7 @@ month_temp = {
 		"total_others" : 0.0,
 		"total_total" : 0.0
 	},
+    "total_hobbies": 0.0,
 	"total_insurance": 0.0,
 	"total_others": 0.0,
 	"total_total" : 0.0

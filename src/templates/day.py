@@ -25,6 +25,7 @@ day_temp = {
 			"others" : 0.0,
 			"total" : 0.0
 		},
+        "hobbies": 0.0,
 		"insurance": 0.0,
 		"others": 0.0,
 		"total" : 0.0
